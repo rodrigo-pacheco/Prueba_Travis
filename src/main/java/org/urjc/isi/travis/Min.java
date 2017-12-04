@@ -30,10 +30,10 @@ public class Min
     T result = itr.next();
 
 	/* Added code in order to solve the error in TestforSoloNullElement()	*/
-	if (result == null)
-	{
-	   throw new NullPointerException();
-	}
+//	if (result == null)
+//	{
+//	   throw new NullPointerException();
+//	}
 
     while (itr.hasNext())
     {   // throws NPE, CCE as needed
