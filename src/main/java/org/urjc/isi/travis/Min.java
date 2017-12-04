@@ -26,23 +26,23 @@ public class Min
        throw new IllegalArgumentException ("Min.min");
     }
 
-//    Iterator<? extends T> itr = list.iterator();
-//    T result = itr.next();
-//
-//	/* Added code in order to solve the error in TestforSoloNullElement()	*/
-//	if (result == null)
-//	{
-//	   throw new NullPointerException();
-//	}
-//
-//    while (itr.hasNext())
-//    {   // throws NPE, CCE as needed
-//        T comp = itr.next();
-//        if (comp.compareTo (result) < 0)
-//        {
-//            result = comp;
-//        }
-//    }
-//    return result;
+    Iterator<? extends T> itr = list.iterator();
+    T result = itr.next();
+
+	/* Added code in order to solve the error in TestforSoloNullElement()	*/
+	if (result == null)
+	{
+	   throw new NullPointerException();
+	}
+
+    while (itr.hasNext())
+    {   // throws NPE, CCE as needed
+        T comp = itr.next();
+        if (comp.compareTo (result) < 0)
+        {
+            result = comp;
+        }
+    }
+    return result;
  }
 }
